@@ -37,7 +37,7 @@
 
       <!-- instagram section -->
       <section class="col-4">
-        <div class="d-flex align-items-center gap-3">
+        <div class="d-flex align-items-center gap-2">
           <h5 class="">Instagram</h5>
           <a href="/"><span class="instaTag">@maxcoach</span></a>
         </div>
