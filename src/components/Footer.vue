@@ -5,16 +5,31 @@
       <!-- address section -->
       <section class="col-4">
         <h4>Address</h4>
+        <p v-for="(item, index) in addressSect">{{ addressSect[index] }}</p>
       </section>
 
       <!-- explore section -->
       <section class="col-2">
         <h4>Explore</h4>
+        <ul v-for="(item, index) in exploreSect" class="list-unstyled">
+          <li>
+            <a href="/" class="text-decoration-none">{{
+              exploreSect[index]
+            }}</a>
+          </li>
+        </ul>
       </section>
 
       <!-- information section -->
       <section class="col-2">
         <h4>Information</h4>
+        <ul v-for="(item, index) in informationSect" class="list-unstyled">
+          <li>
+            <a href="/" class="text-decoration-none">{{
+              informationSect[index]
+            }}</a>
+          </li>
+        </ul>
       </section>
 
       <!-- instagram section -->
@@ -24,8 +39,10 @@
     </div>
 
     <!-- row 2 -->
-    <div class="row">
-      <div class="col-12">PROVA</div>
+    <div class="row rights">
+      <div class="col-12 d-flex justify-content-center text-white">
+        &copy; 2020 Maxcoach. All Rights Reserved
+      </div>
     </div>
   </div>
 </template>
@@ -35,10 +52,23 @@
 export default {
   data() {
     return {
-      address: [
+      addressSect: [
         "382 NE 191st St # 87394 Miami, FL 33179-3899",
         "+1 (305) 547-9909 (9am - 5pm EST, Monday - Friday)",
         "support@maxcoach.com",
+      ],
+      exploreSect: [
+        "Start here",
+        "Success story",
+        "Blog",
+        "Courses",
+        "Contact us",
+      ],
+      informationSect: [
+        "Membership",
+        "Purchase Guide",
+        "Privacy policy",
+        "Terms of services",
       ],
     };
   },
@@ -50,4 +80,8 @@ export default {
 @use "../styles/generals.scss";
 @use "../styles/partials/mixins";
 @use "../styles/partials/variables";
+
+.rights {
+  padding-top: 100px;
+}
 </style>
