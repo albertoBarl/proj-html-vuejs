@@ -123,6 +123,7 @@ export default {
 
 h4 {
   margin-bottom: 20px;
+  color: black;
 }
 
 .rights {
@@ -138,6 +139,10 @@ h4 {
 
 i {
   font-size: 34px;
-  color: $wall;
+  color: grey;
+}
+a,
+p {
+  color: grey;
 }
 </style>
