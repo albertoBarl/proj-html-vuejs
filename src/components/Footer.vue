@@ -1,10 +1,10 @@
 <template lang="">
   <div class="container">
     <!-- row 1 -->
-    <div class="row d-flex text-white">
+    <div class="row d-flex">
       <!-- address section -->
       <section class="col-4">
-        <h4>Address</h4>
+        <h5>Address</h5>
         <p v-for="(item, index) in addressSect">{{ addressSect[index] }}</p>
         <div class="socialsLogos d-flex gap-4 mt-4">
           <ul class="list-unstyled" v-for="(item, index) in socialLogos">
@@ -17,31 +17,30 @@
 
       <!-- explore section -->
       <section class="col-2">
-        <h4>Explore</h4>
+        <h5>Explore</h5>
         <ul v-for="(item, index) in exploreSect" class="list-unstyled">
           <li>
-            <a href="/" class="text-decoration-none">{{
-              exploreSect[index]
-            }}</a>
+            <a href="/">{{ exploreSect[index] }}</a>
           </li>
         </ul>
       </section>
 
       <!-- information section -->
       <section class="col-2">
-        <h4>Information</h4>
+        <h5>Information</h5>
         <ul v-for="(item, index) in informationSect" class="list-unstyled">
           <li>
-            <a href="/" class="text-decoration-none">{{
-              informationSect[index]
-            }}</a>
+            <a href="/">{{ informationSect[index] }}</a>
           </li>
         </ul>
       </section>
 
       <!-- instagram section -->
       <section class="col-4">
-        <h4>Instagram</h4>
+        <div class="d-flex align-items-center gap-3">
+          <h5 class="">Instagram</h5>
+          <a href="/"><span class="instaTag">@maxcoach</span></a>
+        </div>
         <div class="d-flex gap-5">
           <div
             class="sPost"
@@ -120,12 +119,6 @@ export default {
 * {
   line-height: 2.5;
 }
-
-h4 {
-  margin-bottom: 20px;
-  color: black;
-}
-
 .rights {
   padding-top: 100px;
 }
@@ -139,11 +132,16 @@ h4 {
 
 i {
   font-size: 34px;
-  color: grey;
 }
 a,
-p {
+p,
+i {
   color: grey;
+  text-decoration: none;
+}
+
+.instaTag {
+  color: $aranciata;
 }
 
 .col-12 {
