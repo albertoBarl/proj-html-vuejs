@@ -6,13 +6,7 @@
       <section class="col-4">
         <h5>Address</h5>
         <p v-for="(item, index) in addressSect">{{ addressSect[index] }}</p>
-        <div class="socialsLogos d-flex gap-4 mt-4">
-          <ul class="list-unstyled" v-for="(item, index) in socialLogos">
-            <li>
-              <a href="/"><i :class="`${socialLogos[index].icona}`"></i></a>
-            </li>
-          </ul>
-        </div>
+        <socials />
       </section>
 
       <!-- explore section -->
@@ -67,7 +61,11 @@
 
 <!-- script -->
 <script>
+import socials from "./elements/socials.vue";
 export default {
+  components: {
+    socials,
+  },
   data() {
     return {
       addressSect: [
@@ -99,12 +97,6 @@ export default {
         "artist-hero-image-03.png",
         "artist-hero-image-04.jpg",
       ],
-      socialLogos: [
-        { type: "facebook", icona: "fab fa-facebook-square" },
-        { type: "twitter", icona: "fab fa-twitter" },
-        { type: "instagram", icona: "fab fa-instagram" },
-        { type: "linkedin", icona: "fab fa-linkedin" },
-      ],
     };
   },
 };
@@ -130,12 +122,8 @@ export default {
   }
 }
 
-i {
-  font-size: 34px;
-}
 a,
-p,
-i {
+p {
   color: grey;
   text-decoration: none;
 }
