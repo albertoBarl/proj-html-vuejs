@@ -6,11 +6,12 @@
       <section class="col-4">
         <h4>Address</h4>
         <p v-for="(item, index) in addressSect">{{ addressSect[index] }}</p>
-        <div>
-          <a href="/"><i class="fab fa-facebook-square"></i></a>
-          <a href="/"><i class="fab fa-twitter"></i></a>
-          <a href="/"><i class="fab fa-instagram"></i></a>
-          <a href="/"><i class="fab fa-linkedin"></i></a>
+        <div class="socialsLogos d-flex gap-4 mt-4">
+          <ul class="list-unstyled" v-for="(item, index) in socialLogos">
+            <li>
+              <a href="/"><i :class="`${socialLogos[index].icona}`"></i></a>
+            </li>
+          </ul>
         </div>
       </section>
 
@@ -99,6 +100,12 @@ export default {
         "artist-hero-image-03.png",
         "artist-hero-image-04.jpg",
       ],
+      socialLogos: [
+        { type: "facebook", icona: "fab fa-facebook-square" },
+        { type: "twitter", icona: "fab fa-twitter" },
+        { type: "instagram", icona: "fab fa-instagram" },
+        { type: "linkedin", icona: "fab fa-linkedin" },
+      ],
     };
   },
 };
@@ -106,9 +113,13 @@ export default {
 
 <!-- style -->
 <style lang="scss" scoped>
-@use "../styles/generals.scss";
-@use "../styles/partials/mixins";
-@use "../styles/partials/variables";
+@use "../styles/generals.scss" as *;
+@use "../styles/partials/mixins" as *;
+@use "../styles/partials/variables" as *;
+
+* {
+  line-height: 2.5;
+}
 
 h4 {
   margin-bottom: 20px;
@@ -123,5 +134,10 @@ h4 {
   img {
     width: 100%;
   }
+}
+
+i {
+  font-size: 34px;
+  color: $wall;
 }
 </style>

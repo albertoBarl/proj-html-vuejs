@@ -5,7 +5,7 @@
 export default {};
 </script>
 <style lang="scss" scoped>
-@use "../styles/generals.scss";
-@use "../styles/partials/mixins";
-@use "../styles/partials/variables";
+@use "../styles/generals.scss" as *;
+@use "../styles/partials/mixins" as *;
+@use "../styles/partials/variables" as *;
 </style>
