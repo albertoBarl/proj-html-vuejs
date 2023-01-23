@@ -35,6 +35,16 @@
       <!-- instagram section -->
       <section class="col-4">
         <h4>Instagram</h4>
+        <div
+          class="sPost"
+          v-for="(item, index) in instaPosts"
+          :class="[index] > 2 ? 'd-none' : ''"
+        >
+          <img
+            :src="`src/assets/images/${instaPosts[index]}`"
+            alt="not available"
+          />
+        </div>
       </section>
     </div>
 
@@ -70,6 +80,17 @@ export default {
         "Privacy policy",
         "Terms of services",
       ],
+      instaPosts: [
+        "120084500_197897808368764_8114555493043279565_n.jpg",
+        "120012142_177596140500760_8623485824101406058_n.jpg",
+        "120099363_364334431619755_7198812647386067017_n.jpg",
+        "artist-event-01-250x300.jpg",
+        "artist-hero-image-02.jpg",
+        "artist-course-06-480x480.jpg",
+        "artist-hero-image-01.jpg",
+        "artist-hero-image-03.png",
+        "artist-hero-image-04.jpg",
+      ],
     };
   },
 };
@@ -83,5 +104,12 @@ export default {
 
 .rights {
   padding-top: 100px;
+}
+
+.sPost {
+  width: 100px;
+  img {
+    width: 100%;
+  }
 }
 </style>
