@@ -59,7 +59,7 @@
 
     <!-- row 2 -->
     <div class="row rights">
-      <div class="col-12 d-flex justify-content-center text-white">
+      <div class="col-12 d-flex justify-content-center">
         &copy; 2020 Maxcoach. All Rights Reserved
       </div>
     </div>
@@ -144,5 +144,9 @@ i {
 a,
 p {
   color: grey;
+}
+
+.col-12 {
+  color: rgb(193, 191, 191);
 }
 </style>
