@@ -1,11 +1,17 @@
 <template lang="">
-  <div class="container-fluid">
+  <div class="container">
     <!-- row 1 -->
     <div class="row d-flex text-white">
       <!-- address section -->
       <section class="col-4">
         <h4>Address</h4>
         <p v-for="(item, index) in addressSect">{{ addressSect[index] }}</p>
+        <div>
+          <a href="/"><i class="fab fa-facebook-square"></i></a>
+          <a href="/"><i class="fab fa-twitter"></i></a>
+          <a href="/"><i class="fab fa-instagram"></i></a>
+          <a href="/"><i class="fab fa-linkedin"></i></a>
+        </div>
       </section>
 
       <!-- explore section -->
@@ -35,15 +41,17 @@
       <!-- instagram section -->
       <section class="col-4">
         <h4>Instagram</h4>
-        <div
-          class="sPost"
-          v-for="(item, index) in instaPosts"
-          :class="[index] > 2 ? 'd-none' : ''"
-        >
-          <img
-            :src="`src/assets/images/${instaPosts[index]}`"
-            alt="not available"
-          />
+        <div class="d-flex gap-5">
+          <div
+            class="sPost"
+            v-for="(item, index) in instaPosts"
+            :class="[index] > 2 ? 'd-none' : ''"
+          >
+            <img
+              :src="`src/assets/images/${instaPosts[index]}`"
+              alt="not available"
+            />
+          </div>
         </div>
       </section>
     </div>
@@ -102,12 +110,16 @@ export default {
 @use "../styles/partials/mixins";
 @use "../styles/partials/variables";
 
+h4 {
+  margin-bottom: 20px;
+}
+
 .rights {
   padding-top: 100px;
 }
 
 .sPost {
-  width: 100px;
+  width: 150px;
   img {
     width: 100%;
   }
