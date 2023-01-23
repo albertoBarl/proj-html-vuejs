@@ -1,7 +1,7 @@
 <template lang="">
-  <div class="d-flex gap-5 text-white">
+  <div class="d-flex gap-5">
     <ul v-for="(item, index) in navbar" class="list-unstyled">
-      <li>{{ navbar[index].section }}</li>
+      <li>{{ navbar[index].section }}---&ctdot;</li>
     </ul>
   </div>
 </template>
