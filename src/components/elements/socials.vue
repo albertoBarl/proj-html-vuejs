@@ -30,5 +30,8 @@ i {
   font-size: 34px;
   color: grey;
   text-decoration: none;
+  &:hover {
+    color: $aranciata;
+  }
 }
 </style>

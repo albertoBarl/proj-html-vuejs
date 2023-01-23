@@ -3,7 +3,7 @@
     <!-- row 1 -->
     <div class="row d-flex">
       <!-- address section -->
-      <section class="col-4">
+      <section class="address col-4">
         <h5>Address</h5>
         <p v-for="(item, index) in addressSect">{{ addressSect[index] }}</p>
         <socials />
@@ -126,6 +126,16 @@ a,
 p {
   color: grey;
   text-decoration: none;
+}
+a:hover {
+  color: $aranciata;
+}
+
+.address {
+  p:nth-child(4):hover {
+    color: $aranciata;
+    cursor: pointer;
+  }
 }
 
 .instaTag {
