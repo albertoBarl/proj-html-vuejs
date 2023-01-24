@@ -43,6 +43,7 @@ export default {
 @use "../styles/partials/variables" as *;
 
 .artistcoachSect,
+.onlinecourses,
 .upcoming {
   padding: 75px;
 }

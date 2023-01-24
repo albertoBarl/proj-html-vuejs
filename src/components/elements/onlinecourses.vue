@@ -4,7 +4,9 @@
       <h2>Artist coaching</h2>
       <h3>Latest Online Courses</h3>
     </div>
-    <div class="d-flex flex-wrap gap-5">
+
+    <!-- course list -->
+    <div class="courses">
       <div class="card" v-for="(item, index) in cards">
         <div>
           <img
@@ -19,8 +21,8 @@
           {{ cards[index].nStudents }} Students</span
         >
       </div>
+      <button class="btn">View all courses &rarr;</button>
     </div>
-    <button class="btn">View all courses &rarr;</button>
   </div>
 </template>
 <script>
@@ -110,10 +112,18 @@ export default {
   }
 }
 
-.card {
-  width: calc(75% / 4);
-  img {
-    width: 100%;
+.courses {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 50px;
+  justify-content: center;
+  margin-top: 75px;
+  .card {
+    width: calc(75% / 4);
+    border: none;
+    img {
+      width: 100%;
+    }
   }
 }
 
