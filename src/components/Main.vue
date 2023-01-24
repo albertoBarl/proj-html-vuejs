@@ -11,12 +11,16 @@
   <div class="onlinecourses">
     <onlinecourses />
   </div>
+  <div class="articles">
+    <articles />
+  </div>
 </template>
 <script>
 import jumbotron from "./elements/jumbotron.vue";
 import artistcoachSect from "./elements/artistcoachSect.vue";
 import testimonials from "./elements/testimonials.vue";
 import onlinecourses from "./elements/onlinecourses.vue";
+import articles from "./elements/articles.vue";
 
 export default {
   components: {
@@ -24,6 +28,7 @@ export default {
     artistcoachSect,
     testimonials,
     onlinecourses,
+    articles,
   },
 };
 </script>
@@ -35,7 +40,8 @@ export default {
 .artistcoachSect {
   padding: 75px;
 }
-.testimonials {
+.testimonials,
+.articles {
   padding: 75px;
   background-color: $d-wall;
 }
