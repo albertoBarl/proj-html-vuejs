@@ -1,7 +1,9 @@
 <template lang="">
   <div class="d-flex gap-5">
     <ul v-for="(item, index) in navbar" class="list-unstyled">
-      <li>{{ navbar[index].section }}---&ctdot;</li>
+      <li class="d-flex">
+        {{ navbar[index].section }} <span class="ms-2">&darr;</span>
+      </li>
     </ul>
   </div>
 </template>
@@ -91,7 +93,7 @@ export default {
   },
 };
 </script>
-<style lang="scss">
+<style lang="scss" scoped>
 @use "../../styles/generals.scss" as *;
 @use "../../styles/partials/mixins" as *;
 @use "../../styles/partials/variables" as *;
