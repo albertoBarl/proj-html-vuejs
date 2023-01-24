@@ -47,6 +47,5 @@ export default {
 
 .footer {
   background-color: $d-wall;
-  padding: 75px 0px;
 }
 </style>

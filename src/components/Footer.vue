@@ -1,8 +1,11 @@
 <template lang="">
-  <div class="bg-primary">
+  <!-- newsletter -->
+  <div class="newsletter">
     <newsletter />
   </div>
-  <div class="container">
+
+  <!-- proper footer -->
+  <div class="container mt-5">
     <!-- row 1 -->
     <div class="row d-flex">
       <!-- address section -->
@@ -113,6 +116,11 @@ export default {
 @use "../styles/generals.scss" as *;
 @use "../styles/partials/mixins" as *;
 @use "../styles/partials/variables" as *;
+
+.newsletter {
+  background-color: #2b4081;
+  padding: 75px;
+}
 
 * {
   line-height: 2.5;
