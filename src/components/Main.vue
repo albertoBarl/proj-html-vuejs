@@ -14,6 +14,9 @@
   <div class="articles">
     <articles />
   </div>
+  <div class="upcoming">
+    <upcoming />
+  </div>
 </template>
 <script>
 import jumbotron from "./elements/jumbotron.vue";
@@ -21,6 +24,7 @@ import artistcoachSect from "./elements/artistcoachSect.vue";
 import testimonials from "./elements/testimonials.vue";
 import onlinecourses from "./elements/onlinecourses.vue";
 import articles from "./elements/articles.vue";
+import upcoming from "./elements/upcoming.vue";
 
 export default {
   components: {
@@ -29,6 +33,7 @@ export default {
     testimonials,
     onlinecourses,
     articles,
+    upcoming,
   },
 };
 </script>

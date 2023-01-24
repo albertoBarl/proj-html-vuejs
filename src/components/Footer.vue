@@ -1,4 +1,7 @@
 <template lang="">
+  <div class="bg-primary">
+    <newsletter />
+  </div>
   <div class="container">
     <!-- row 1 -->
     <div class="row d-flex">
@@ -62,9 +65,12 @@
 <!-- script -->
 <script>
 import socials from "./elements/socials.vue";
+import newsletter from "./elements/newsletter.vue";
+
 export default {
   components: {
     socials,
+    newsletter,
   },
   data() {
     return {
