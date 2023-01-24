@@ -1,12 +1,15 @@
 <template lang="">
   <jumbotron />
+  <artistcoachSect />
 </template>
 <script>
 import jumbotron from "./elements/jumbotron.vue";
+import artistcoachSect from "./elements/artistcoachSect.vue";
 
 export default {
   components: {
     jumbotron,
+    artistcoachSect,
   },
 };
 </script>
