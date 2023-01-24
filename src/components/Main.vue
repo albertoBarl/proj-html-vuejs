@@ -42,7 +42,8 @@ export default {
 @use "../styles/partials/mixins" as *;
 @use "../styles/partials/variables" as *;
 
-.artistcoachSect {
+.artistcoachSect,
+.upcoming {
   padding: 75px;
 }
 .testimonials,
