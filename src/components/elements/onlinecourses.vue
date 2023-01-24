@@ -17,9 +17,10 @@
         <span
           >{{ cards[index].nLessons }} Lessons
           {{ cards[index].nStudents }} Students</span
-        ><span></span>
+        >
       </div>
     </div>
+    <button class="btn">View all courses &rarr;</button>
   </div>
 </template>
 <script>
@@ -113,6 +114,17 @@ export default {
   width: calc(75% / 4);
   img {
     width: 100%;
+  }
+}
+
+.btn {
+  margin-top: 50px;
+  padding: 10px 30px;
+  background-color: $aranciata;
+  color: $wall;
+  &:hover {
+    background-color: $cielo;
+    color: $wall;
   }
 }
 </style>
