@@ -1,6 +1,10 @@
 <template lang="">
-  <jumbotron />
-  <artistcoachSect />
+  <div class="jumbotron">
+    <jumbotron />
+  </div>
+  <div class="artistcoachSect">
+    <artistcoachSect />
+  </div>
 </template>
 <script>
 import jumbotron from "./elements/jumbotron.vue";
@@ -17,4 +21,8 @@ export default {
 @use "../styles/generals.scss" as *;
 @use "../styles/partials/mixins" as *;
 @use "../styles/partials/variables" as *;
+
+.artistcoachSect {
+  padding: 75px;
+}
 </style>

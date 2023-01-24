@@ -1,6 +1,6 @@
 <template lang="">
   <div class="pBackground" style="height: 80vh">
-    <div class="pCenter d-flex flex-column align-items-center">
+    <div class="pCenter">
       <h2>Hello, I'm Matin</h2>
       <h3>Artist Coaching And Mentoring Might Be for You.</h3>
       <button class="btn">Get started today</button>
@@ -41,6 +41,9 @@ export default {};
 }
 
 .pCenter {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
   z-index: 3;
   h2 {
     font-family: cursive;

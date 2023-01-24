@@ -1,23 +1,25 @@
 <template lang="">
-  <div class="container d-flex flex-column">
+  <div class="container d-flex flex-column align-items-center">
     <!-- "helping with" section -->
-    <div class="pCenter d-flex flex-column align-items-center">
-      <h2>Artist coaching</h2>
-      <h3>I understand what it takes to create. I can help you with</h3>
-    </div>
-    <div class="d-flex justify-content-around align-items-center gap-5 p-5">
-      <div v-for="(item, index) in helping">
-        <img
-          :src="`src/assets/images/${helping[index].image}`"
-          alt="not available"
-        />
-        <h4>{{ helping[index].label }}</h4>
-        <p>{{ helping[index].description }}</p>
+    <div class="helping">
+      <div class="pCenter d-flex flex-column align-items-center">
+        <h2>Artist coaching</h2>
+        <h3>I understand what it takes to create. I can help you with</h3>
+      </div>
+      <div class="d-flex justify-content-around align-items-center gap-5 p-5">
+        <div v-for="(item, index) in helping">
+          <img
+            :src="`src/assets/images/${helping[index].image}`"
+            alt="not available"
+          />
+          <h4>{{ helping[index].label }}</h4>
+          <p>{{ helping[index].description }}</p>
+        </div>
       </div>
     </div>
 
     <!-- quote section -->
-    <div class="quote d-flex">
+    <div class="quote">
       <div>
         <h1>
           I coach and mentor visual artists, like you, to Create Like You Mean
@@ -36,6 +38,16 @@
         </p>
         <button class="btn">Get started today</button>
       </div>
+    </div>
+
+    <!-- youtube video sect -->
+    <div class="video">
+      <img
+        class="position-relative"
+        src="src/assets/images/artist-video-poster.jpg"
+        alt="not available"
+      />
+      <a href=""><i class="fab fa-youtube"></i></a>
     </div>
   </div>
 </template>
@@ -78,9 +90,13 @@ export default {
 @use "../../styles/partials/mixins" as *;
 @use "../../styles/partials/variables" as *;
 
+.container {
+  gap: 105px;
+}
+
 .pCenter,
 .quote {
-  z-index: 3;
+  display: flex;
   h3 {
     width: 75%;
     text-align: center;
@@ -91,6 +107,23 @@ export default {
     font-style: italic;
     font-size: 40px;
     color: $cielo;
+  }
+}
+
+.video {
+  width: 55vw;
+  position: relative;
+  img {
+    position: relative;
+    width: 100%;
+    height: auto;
+  }
+  i {
+    position: absolute;
+    top: 50%;
+    left: 47%;
+    font-size: 75px;
+    color: red;
   }
 }
 
