@@ -6,7 +6,9 @@
         <h2>Artist coaching</h2>
         <h3>I understand what it takes to create. I can help you with</h3>
       </div>
-      <div class="d-flex justify-content-around align-items-center gap-5 p-5">
+      <div
+        class="d-flex justify-content-around align-items-center gap-5 p-5 mt-4"
+      >
         <div v-for="(item, index) in helping">
           <img
             :src="`src/assets/images/${helping[index].image}`"
@@ -97,6 +99,7 @@ export default {
 .pCenter,
 .quote {
   display: flex;
+  justify-content: center;
   h3 {
     width: 75%;
     text-align: center;
