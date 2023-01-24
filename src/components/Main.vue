@@ -5,15 +5,20 @@
   <div class="artistcoachSect">
     <artistcoachSect />
   </div>
+  <div class="testimonials">
+    <testimonials />
+  </div>
 </template>
 <script>
 import jumbotron from "./elements/jumbotron.vue";
 import artistcoachSect from "./elements/artistcoachSect.vue";
+import testimonials from "./elements/testimonials.vue";
 
 export default {
   components: {
     jumbotron,
     artistcoachSect,
+    testimonials,
   },
 };
 </script>
@@ -24,5 +29,9 @@ export default {
 
 .artistcoachSect {
   padding: 75px;
+}
+.testimonials {
+  padding: 75px;
+  background-color: $d-wall;
 }
 </style>
