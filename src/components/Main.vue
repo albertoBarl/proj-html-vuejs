@@ -8,17 +8,22 @@
   <div class="testimonials">
     <testimonials />
   </div>
+  <div class="onlinecourses">
+    <onlinecourses />
+  </div>
 </template>
 <script>
 import jumbotron from "./elements/jumbotron.vue";
 import artistcoachSect from "./elements/artistcoachSect.vue";
 import testimonials from "./elements/testimonials.vue";
+import onlinecourses from "./elements/onlinecourses.vue";
 
 export default {
   components: {
     jumbotron,
     artistcoachSect,
     testimonials,
+    onlinecourses,
   },
 };
 </script>
