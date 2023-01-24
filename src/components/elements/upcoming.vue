@@ -84,6 +84,7 @@ export default {
 .events {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   gap: 50px;
   margin-top: 75px;
   .card {
