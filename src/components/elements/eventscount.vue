@@ -1,5 +1,4 @@
 <template lang="">
-  <!-- event of the year -->
   <div class="container d-flex justify-content-center gap-4 m-3">
     <span>Starts TOMORROW! Our biggest event of the year...</span>
     <div></div>

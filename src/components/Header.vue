@@ -23,6 +23,8 @@
     </div>
   </div>
 </template>
+
+<!-- script -->
 <script>
 import navbar from "./elements/navbar.vue";
 import socials from "./elements/socials.vue";
@@ -34,6 +36,8 @@ export default {
   },
 };
 </script>
+
+<!-- style -->
 <style lang="scss" scoped>
 @use "../styles/generals.scss" as *;
 @use "../styles/partials/mixins" as *;
