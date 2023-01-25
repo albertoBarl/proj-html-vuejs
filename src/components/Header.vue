@@ -13,12 +13,8 @@
 
       <!-- nav -->
       <div class="col-4 d-flex justify-content-center">
-        <div class="navigation d-flex gap-5">
-          <div
-            class="select dropdown"
-            v-for="(item, index) in navbar"
-            :key="index"
-          >
+        <div class="d-flex gap-5">
+          <div class="dropdown" v-for="(item, index) in navbar" :key="index">
             <label
               class="d-flex"
               data-bs-toggle="dropdown"
@@ -26,7 +22,7 @@
             >
               {{ navbar[index].section }}
             </label>
-            <ul class="menu dropdown-menu list-unstyled">
+            <ul class="dropdown-menu rounded-0 border-0 mt-3 list-unstyled">
               <li
                 class="dropdown-item"
                 v-for="(item, index) in navbar[index].dropdowns"
