@@ -8,18 +8,18 @@
       <div class="slider">
         <div class="item-slider" v-for="(item, index) in slider">
           <div class="item" :class="index === activeImage ? 'active' : ''">
-            <h6>{{ slider[activeImage].ref }}</h6>
-            <p>{{ slider[activeImage].inside }}</p>
+            <h6>{{ slider[index].ref }}</h6>
+            <p>{{ slider[index].inside }}</p>
             <div class="d-flex">
               <div>
                 <img
-                  :src="`src/assets/images/${slider[activeImage].avatar}`"
+                  :src="`src/assets/images/${slider[index].avatar}`"
                   alt="avatar"
                 />
               </div>
               <div>
-                <h6>{{ slider[activeImage].owner }}</h6>
-                <span>/ {{ slider[activeImage].job }}</span>
+                <h6>{{ slider[index].owner }}</h6>
+                <span>/ {{ slider[index].job }}</span>
               </div>
             </div>
           </div>
@@ -116,7 +116,7 @@ export default {
 }
 
 .item {
-  display: none;
+  opacity: 0.2;
 }
 
 .item {
@@ -127,7 +127,7 @@ export default {
 }
 
 .item.active {
-  display: block;
+  opacity: 1;
 }
 
 .circles-container {
