@@ -146,14 +146,20 @@ export default {
 @use "./styles/partials/mixins" as *;
 @use "./styles/partials/variables" as *;
 
-// .eventscount {
-// }
+.eventscount {
+  background-color: $d-wall;
+  z-index: 5;
+}
+
 .header {
   background-color: $wall;
   position: fixed;
+  z-index: 10;
   width: 100%;
-  z-index: 4;
-  // top: 0;
+}
+
+.main {
+  padding-top: 60px;
 }
 
 .footer {
