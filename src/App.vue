@@ -153,13 +153,6 @@ export default {
 
 .header {
   background-color: $wall;
-  position: fixed;
-  z-index: 10;
-  width: 100%;
-}
-
-.main {
-  padding-top: 60px;
 }
 
 .footer {
