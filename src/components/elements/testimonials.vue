@@ -116,12 +116,9 @@ export default {
 }
 
 .item {
-  opacity: 0.2;
-}
-
-.item {
+  opacity: 0.1;
   height: 100%;
-  min-width: 400px;
+  min-width: calc(100% / 4);
   background-color: $wall;
   padding: 34px;
 }
