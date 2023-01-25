@@ -4,6 +4,23 @@
       <h2>Testimonials</h2>
       <h3>Why do people love me?</h3>
     </div>
+    <div>
+      <div class="slider d-flex">
+        <div class="item-slider" v-for="(item, index) in slider">
+          <div class="item">
+            <img :src="`./img/${slider[index].ref}`" />
+          </div>
+        </div>
+        <!--Pulsanti di navigazione prec e succ del carosello immagini-->
+        <div class="circles-container">
+          <div class="circle"></div>
+          <div class="circle"></div>
+          <div class="circle"></div>
+          <div class="circle"></div>
+          <div class="circle"></div>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 <script>
@@ -68,5 +85,54 @@ export default {
     font-size: 40px;
     color: $cielo;
   }
+}
+
+.slider {
+  width: 50vw;
+  height: 50vh;
+  position: relative;
+}
+
+.item {
+  display: none;
+}
+
+.item-slider,
+.item,
+img {
+  height: 100%;
+}
+
+.item img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.item.active {
+  display: block;
+}
+
+.circles-container {
+  display: flex;
+  justify-content: center;
+}
+
+.circle {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: rgba(174, 174, 174, 0.509);
+  margin: 10px;
+  cursor: pointer;
+}
+
+.circle.active,
+.circle:hover {
+  background-color: rgba(174, 174, 174, 1);
+}
+
+.hidden {
+  display: none;
 }
 </style>
