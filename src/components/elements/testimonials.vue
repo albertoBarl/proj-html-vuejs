@@ -1,24 +1,38 @@
 <template lang="">
-  <div class="container-fluid">
+  <div class="container-fluid d-flex flex-column align-items-center">
     <div class="pCenter">
       <h2>Testimonials</h2>
       <h3>Why do people love me?</h3>
     </div>
     <div>
-      <div class="slider d-flex">
+      <div class="slider">
         <div class="item-slider" v-for="(item, index) in slider">
-          <div class="item">
-            <img :src="`./img/${slider[index].ref}`" />
+          <div class="item" :class="index === activeImage ? 'active' : ''">
+            <h6>{{ slider[activeImage].ref }}</h6>
+            <p>{{ slider[activeImage].inside }}</p>
+            <div class="d-flex">
+              <div>
+                <img
+                  :src="`src/assets/images/${slider[activeImage].avatar}`"
+                  alt="avatar"
+                />
+              </div>
+              <div>
+                <h6>{{ slider[activeImage].owner }}</h6>
+                <span>/ {{ slider[activeImage].job }}</span>
+              </div>
+            </div>
           </div>
         </div>
-        <!--Pulsanti di navigazione prec e succ del carosello immagini-->
-        <div class="circles-container">
-          <div class="circle"></div>
-          <div class="circle"></div>
-          <div class="circle"></div>
-          <div class="circle"></div>
-          <div class="circle"></div>
-        </div>
+      </div>
+      <!--Pulsanti di navigazione prec e succ del carosello immagini-->
+      <div class="circles-container">
+        <div
+          class="circle"
+          v-for="(item, index) in slider"
+          :class="index === activeImage ? 'active' : ''"
+          @click="switchImg(index)"
+        ></div>
       </div>
     </div>
   </div>
@@ -27,9 +41,10 @@
 export default {
   data() {
     return {
+      activeImage: 0,
       slider: [
         {
-          ref: "try",
+          ref: "High level of efficiency and scientific teaching methods",
           inside:
             "I am free to learn at my own pace, follow my own schedule and choose the subject I want to learn from the syllabus. Great study portal for people like me.",
           avatar: "AVATAR",
@@ -37,7 +52,7 @@ export default {
           job: "Boh",
         },
         {
-          ref: "try",
+          ref: "Professional team of specialists and passionate mentors at reach",
           inside:
             "I need to get a certification for English proficiency and MaxCoach is my best choice. Their tutors are smart and professional when dealing with students.				",
           avatar: "AVATAR",
@@ -45,7 +60,7 @@ export default {
           job: "Boh",
         },
         {
-          ref: "try",
+          ref: "The MaxCoach team works really hard to ensure high quality",
           inside:
             "I am happy with their arrangement of lessons and subjects. They reflect a scientific  investigation into effective methods to be adopted for learners of all levels.				",
           avatar: "AVATAR",
@@ -53,7 +68,7 @@ export default {
           job: "Boh",
         },
         {
-          ref: "try",
+          ref: "It's a choice of quality for people with special needs",
           inside:
             "I'm a very strict person so I require everything to be organized and neat. Then, I'll be able to make things right and shine. MaxCoach guys just got me.				",
           avatar: "AVATAR",
@@ -62,6 +77,11 @@ export default {
         },
       ],
     };
+  },
+  methods: {
+    switchImg(index) {
+      this.activeImage = index;
+    },
   },
 };
 </script>
@@ -75,7 +95,6 @@ export default {
   flex-direction: column;
   align-items: center;
   h3 {
-    width: 75%;
     text-align: center;
     font-weight: 500;
   }
@@ -88,24 +107,23 @@ export default {
 }
 
 .slider {
-  width: 50vw;
-  height: 50vh;
+  padding: 25px;
+  display: flex;
+  gap: 25px;
+  width: 80vw;
   position: relative;
+  overflow: auto;
 }
 
 .item {
   display: none;
 }
 
-.item-slider,
-.item,
-img {
+.item {
   height: 100%;
-}
-
-.item img {
-  width: 100%;
-  object-fit: cover;
+  min-width: 400px;
+  background-color: $wall;
+  padding: 34px;
 }
 
 .item.active {
