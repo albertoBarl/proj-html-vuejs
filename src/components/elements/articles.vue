@@ -87,6 +87,7 @@ export default {
 .articles {
   padding: 75px;
   display: flex;
+  align-items: flex-start;
   gap: 25px;
   .carta {
     background-color: white;

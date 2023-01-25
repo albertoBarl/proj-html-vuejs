@@ -121,8 +121,16 @@ export default {
   .card {
     width: calc(75% / 4);
     border: none;
+    &:hover {
+      padding: 10px;
+      border: 1px solid black;
+      border-radius: 0;
+    }
     img {
       width: 100%;
+    }
+    p {
+      color: $aranciata;
     }
   }
 }
