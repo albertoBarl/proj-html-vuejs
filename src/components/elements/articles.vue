@@ -1,5 +1,5 @@
 <template lang="">
-  <div class="container position-relative">
+  <div class="container d-flex flex-column align-items-center">
     <div class="pCenter">
       <h2>Articles and Tips</h2>
       <h3>Latest From the Blog</h3>
@@ -73,7 +73,6 @@ export default {
   flex-direction: column;
   align-items: center;
   h3 {
-    width: 75%;
     text-align: center;
     font-weight: 500;
   }
