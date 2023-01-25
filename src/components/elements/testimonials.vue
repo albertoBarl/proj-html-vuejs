@@ -7,17 +7,21 @@
     <div>
       <div class="slider">
         <div class="item-slider" v-for="(item, index) in slider">
-          <div class="item" :class="index === activeImage ? 'active' : ''">
+          <div
+            class="item"
+            :class="index === activeImage ? 'active' : ''"
+            @click="switchImg(index)"
+          >
             <h6>{{ slider[index].ref }}</h6>
-            <p>{{ slider[index].inside }}</p>
-            <div class="d-flex">
-              <div>
-                <img
-                  :src="`src/assets/images/${slider[index].avatar}`"
-                  alt="avatar"
-                />
-              </div>
-              <div>
+            <p class="mt-3">{{ slider[index].inside }}</p>
+            <div class="d-flex align-items-center mt-3">
+              <img
+                :src="`src/assets/images/${slider[index].avatar}`"
+                alt="avatar"
+                class="rounded-circle"
+              />
+
+              <div class="ms-3">
                 <h6>{{ slider[index].owner }}</h6>
                 <span>/ {{ slider[index].job }}</span>
               </div>
@@ -47,33 +51,33 @@ export default {
           ref: "High level of efficiency and scientific teaching methods",
           inside:
             "I am free to learn at my own pace, follow my own schedule and choose the subject I want to learn from the syllabus. Great study portal for people like me.",
-          avatar: "AVATAR",
-          owner: "Owner",
-          job: "Boh",
+          avatar: "artist-testimonial-avatar-04.jpg",
+          owner: "Mina Hollace",
+          job: "Freelancer",
         },
         {
           ref: "Professional team of specialists and passionate mentors at reach",
           inside:
             "I need to get a certification for English proficiency and MaxCoach is my best choice. Their tutors are smart and professional when dealing with students.				",
-          avatar: "AVATAR",
-          owner: "Owner",
-          job: "Boh",
+          avatar: "artist-testimonial-avatar-01.jpg",
+          owner: "Madley Pondor",
+          job: "IT Specialist",
         },
         {
           ref: "The MaxCoach team works really hard to ensure high quality",
           inside:
             "I am happy with their arrangement of lessons and subjects. They reflect a scientific  investigation into effective methods to be adopted for learners of all levels.				",
-          avatar: "AVATAR",
-          owner: "Owner",
-          job: "Boh",
+          avatar: "artist-testimonial-avatar-03.jpg",
+          owner: "Luvic Dubble",
+          job: "Private Tutor",
         },
         {
           ref: "It's a choice of quality for people with special needs",
           inside:
             "I'm a very strict person so I require everything to be organized and neat. Then, I'll be able to make things right and shine. MaxCoach guys just got me.				",
-          avatar: "AVATAR",
-          owner: "Owner",
-          job: "Boh",
+          avatar: "artist-testimonial-avatar-02.jpg",
+          owner: "Florence Themes",
+          job: "Multimedia Admin",
         },
       ],
     };
@@ -107,10 +111,11 @@ export default {
 }
 
 .slider {
+  margin: 50px 0px;
   padding: 25px;
   display: flex;
   gap: 25px;
-  width: 80vw;
+  width: 90vw;
   position: relative;
   overflow: auto;
 }
@@ -121,6 +126,9 @@ export default {
   min-width: calc(100% / 4);
   background-color: $wall;
   padding: 34px;
+  img {
+    width: 50px;
+  }
 }
 
 .item.active {
