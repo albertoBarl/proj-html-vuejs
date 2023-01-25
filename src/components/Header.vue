@@ -14,15 +14,28 @@
       <!-- nav -->
       <div class="col-4 d-flex justify-content-center">
         <div class="navigation d-flex gap-5">
-          <ul
+          <div
+            class="select dropdown"
             v-for="(item, index) in navbar"
             :key="index"
-            class="list-unstyled"
           >
-            <li class="d-flex">
-              {{ navbar[index].section }} <span class="ms-2">&darr;</span>
-            </li>
-          </ul>
+            <label
+              class="d-flex"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              {{ navbar[index].section }}
+            </label>
+            <ul class="menu dropdown-menu list-unstyled">
+              <li
+                class="dropdown-item"
+                v-for="(item, index) in navbar[index].dropdowns"
+                :key="index"
+              >
+                {{ item }}
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
 

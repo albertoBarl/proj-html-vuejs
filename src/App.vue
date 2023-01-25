@@ -19,25 +19,25 @@ export default {
         {
           section: "Home",
           dropdowns: [
-            { label: "MaxCoach Education", status: "hot" },
-            { label: "Course Portal", status: null },
-            { label: "Distance Learning", status: "hot" },
-            { label: "Multimedia Pedagogy", status: null },
-            { label: "Modern Scrolling", status: null },
-            { label: "Remote Training", status: null },
-            { label: "Healt Coaching", status: null },
-            { label: "Gym Coaching", status: null },
-            { label: "Business", status: null },
-            { label: "Artist", status: null },
-            { label: "Kitchen Coach", status: null },
-            { label: "Motivation", status: null },
-            { label: "Dancing", status: null },
-            { label: "Guitar", status: null },
-            { label: "Yoga", status: null },
-            { label: "Photography", status: null },
-            { label: "Personal Finance", status: null },
-            { label: "Sales Coaching", status: "new" },
-            { label: "Mental Therapy", status: "new" },
+            "MaxCoach Education",
+            "Course Portal",
+            "Distance Learning",
+            "Multimedia Pedagogy",
+            "Modern Scrolling",
+            "Remote Training",
+            "Healt Coaching",
+            "Gym Coaching",
+            "Business",
+            "Artist",
+            "Kitchen Coach",
+            "Motivation",
+            "Dancing",
+            "Guitar",
+            "Yoga",
+            "Photography",
+            "Personal Finance",
+            "Sales Coaching",
+            "Mental Therapy",
           ],
         },
         {
@@ -66,15 +66,7 @@ export default {
             "Become a Teacher",
             "Profile",
             "Checkout",
-            {
-              theName: "Single Layout",
-              insideDrop: [
-                "Free Course",
-                "Sticky Features Bar",
-                "Standard Sidebar",
-                "No Sidebar",
-              ],
-            },
+            "Single Layout",
           ],
         },
         { section: "Features", dropdowns: ["Events", "Zoom Meetings"] },
@@ -103,7 +95,7 @@ export default {
     <eventscount />
   </div>
   <div class="header">
-    <Header :navbar="navbar" />
+    <Header :navbar="navbar" :key="index" />
   </div>
   <div class="main">
     <Main />
@@ -122,8 +114,9 @@ export default {
 // }
 .header {
   background-color: $wall;
-  // position: fixed;
-  // width: 100%;
+  position: fixed;
+  width: 100%;
+  z-index: 4;
   // top: 0;
 }
 
